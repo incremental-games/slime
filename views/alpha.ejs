@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<meta name="description" content="Slime" />
+		<link rel="icon" type="image/png" href="/img/favicon.png" />
+		<title>SLIME - Sign Up</title>
+	</head>
+	<body>
+		<link href='http://fonts.googleapis.com/css?family=Istok+Web:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			function downloadJSAtOnload() {
+				var e = document.createElement("script");
+				e.src = "/js/main.js?num=" + (Math.random() * 100);
+				document.body.appendChild(e);
+			}
+			if (window.addEventListener)
+			window.addEventListener("load", downloadJSAtOnload, false);
+			else if (window.attachEvent)
+			window.attachEvent("onload", downloadJSAtOnload);
+			else window.onload = downloadJSAtOnload;
+		</script>
+		<div class="window">
+			<h1>Alpha signup</h1>
+			<p>
+				SLIME is an incremental multiplayer RPG. Eat other slimes and grow to massive proportions, unlocking elements, stats, zones, and abilities. 
+			</p>
+			<p>
+				Currently in a closed-alpha. Join us on irc at freenode#incremental_dev to help out.
+			</p>
+			<% if (key) { %>
+				<form action="signup" method="POST">
+					<input type="text" placeholder="Username" name="username">
+					<input type="password" placeholder="Password">
+					<input type="submit" value="SIGN UP">
+				</form>	
+			<% } else { %>
+				<form action="signup" method="POST">
+					<input type="text" placeholder="Email" name="email">
+					<input type="submit" value="Request a key">
+				</form>
+			<% } %>
+		</body>
+</html>
