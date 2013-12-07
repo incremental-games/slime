@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+<<<<<<< .merge_file_a03300
     "start": "node slime.js"
   },
   "dependencies": {
@@ -13,3 +14,13 @@
     "bcrypt": "*"
   }
 }
+=======
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.3.1",
+    "mongoose" : "*",
+    "extjs": "*"
+  }
+}
+>>>>>>> .merge_file_a03712
