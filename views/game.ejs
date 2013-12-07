@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<meta name="description" content="Slime" />
+		<link rel="icon" type="image/png" href="/img/favicon.png" />
+		<title>SLIME</title>
+		<style>
+			body {
+				margin: 0;
+				overflow: hidden;
+			}
+			canvas {
+				background-color: #0e1448;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas></canvas>
+		<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript">
+			function downloadJSAtOnload() {
+				var e = document.createElement("script");
+				e.src = "/js/game.js?num=" + (Math.random() * 100);
+				document.body.appendChild(e);
+			}
+			if (window.addEventListener)
+			window.addEventListener("load", downloadJSAtOnload, false);
+			else if (window.attachEvent)
+			window.attachEvent("onload", downloadJSAtOnload);
+			else window.onload = downloadJSAtOnload;
+		</script>
+	</body>
+</html>

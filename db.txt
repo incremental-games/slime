@@ -1,0 +1,3 @@
+$HOME/webapps/mongodb_slime/mongodb-linux-i686-2.2.6/bin/mongod --auth --dbpath $HOME/webapps/mongodb_slime/data/ --port 14769
+$HOME/webapps/mongodb_slime/mongodb-linux-i686-2.2.6/bin/mongo localhost:14769/admin'
+db.addUser("admin", "4G94gOxaZlUK4P15DHKg")

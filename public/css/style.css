@@ -1,9 +1,14 @@
 body {
 	font-family: 'Istok Web', sans-serif;
 	font-size: 18px;
+	color: #dfdfdf;
 	background-color: #44220f;
-	background-image: url(../img/mockup.png);
+	background-image: url(../img/world_map.png);
 	background-size: cover;
+}
+a {
+	color: #55DD43;
+	text-decoration: none;
 }
 .window {
     background-color: #353535;
@@ -16,28 +21,58 @@ body {
     width: 600px;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
-h1 {
+h1, small {
 	color: #55dd43;
 	text-align: center;
+	display: block;
 }
 form {
-	display: block;
-	text-align: center;
+    display: table;
+    margin: 10px auto;
+    text-align: center;
 }
 input {
     border: medium none;
     border-radius: 5px;
     display: inline-block;
-    margin: 20px;
-    padding: 5px;
+    margin: 10px;
+    padding: 10px;
 	color: #353535;
 	width: 200px;
 }
 input[type="submit"] {
-    background-color: #428BCA;
-    color: #FFFFFF;
+    background-color: #80e680;
+    color: #333;
     cursor: pointer;
+	font-size: 18px;
+	float: right;
 }
 input[type="submit"]:hover {
-	background-color: #3270a5;
+	background-color: #47b986;
+	box-shadow: 0 0 2px 0 #666 inset;
+}
+input:focus {
+	box-shadow: 0 0 2px 0 #666 inset;
+}
+.error {
+	color: #c33535;
+}
+.logo {
+    background-image: url("../img/sheet_slime1.png");
+    background-position: right center;
+    display: inline-block;
+    height: 26px;
+    vertical-align: middle;
+    width: 42px;
+}
+.logo:hover {
+	background-position: left center;
+}
+.darken {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
 }
